@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+.frame {
+    flex: 1;
+    transition: all 0.3s ease;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.frame:hover {
+    transform: scale(1.1);
+    background-color: #aaa; /* Change color on hover */
+}
+
+.content {
+    text-align: center;
+}
+
+#leftFrame:hover .content {
+    content: "Information about the left frame.";
+}
+
+#rightFrame:hover .content {
+    content: "Information about the right frame.";
+}
