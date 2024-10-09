@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frame Example</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Game Selection</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="frame" id="leftFrame" onclick="redirect('https://example.com/left')">
-        <div class="content">Left Frame</div>
+    <div class="container">
+        <!-- Frame for GTA V -->
+        <div class="frame" id="gta">
+            <div class="title">GTA V</div>
+        </div>
+
+        <!-- Frame for Osu! Tatakae! Ouendan! -->
+        <div class="frame" id="osu">
+            <div class="title">Osu! Tatakae! Ouendan!</div>
+        </div>
     </div>
-    <div class="frame" id="rightFrame" onclick="redirect('https://example.com/right')">
-        <div class="content">Right Frame</div>
-    </div>
-    <script src="script.js"></script>
 </body>
 </html>
