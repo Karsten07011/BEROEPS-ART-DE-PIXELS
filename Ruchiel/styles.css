@@ -1,4 +1,3 @@
-/* Reset some default styling */
 body, html {
     margin: 0;
     padding: 0;
@@ -8,7 +7,7 @@ body, html {
 }
 
 header {
-    background: linear-gradient(to right, #ff87c591, #ff87c6); /* Gradient towards the buttons */
+    background: linear-gradient(to right, #ff87c591, #ff87c6); 
     padding: 1em 0;
     position: fixed;
     top: 0;
@@ -40,8 +39,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Add background on hover */
-    color: #383838; /* Green color on hover */
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #383838; 
 }
 
 .video-container {
