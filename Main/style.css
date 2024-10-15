@@ -1,44 +1,31 @@
-/* Basic reset */
-* {
-    margin: 0;
+ul {
+    list-style: none;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set the body and html to full height */
-html, body {
-    height: 100%;
-}
-
-/* Set the container to center the frames horizontally */
-.container {
+    margin: 0;
     display: flex;
-    justify-content: space-around;  /* Space around the frames */
-    align-items: center;
-    height: 100vh;  /* Full height of the viewport */
-    padding: 0 50px;  /* Adds space on the sides of the viewport */
-}
-
-/* Basic styling for each frame */
-.frame {
-    width: 45%;  /* About half the screen width, with some spacing */
-    height: 80vh;  /* Height of each frame */
-    background-color: rgba(0, 0, 0, 0.7);  /* Dark background with some transparency */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    border-radius: 15px; /* Optional: Rounded corners */
-}
-
-/* Title styling */
-.title {
-    font-size: 2rem;
-    color: white;
-}
-
-/* Hover effect to reveal a bloom */
-.frame:hover {
-    background-color: rgba(0, 0, 0, 1);  /* Remove transparency */
-    transform: scale(1.05);  /* Slight zoom effect */
-}
+    justify-content: space-between;
+  }
+  
+  li {
+    margin: 20px;
+  }
+  
+  .container1, .container2 {
+    display: inline-block;
+  }
+  
+  .frame {
+    padding: 20px;
+    border: 1px solid #ccc;
+    transition: transform 0.5s;
+  }
+  
+  .frame:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
