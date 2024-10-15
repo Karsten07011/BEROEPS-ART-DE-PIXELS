@@ -1,13 +1,24 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+document.addEventListener('scroll', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    const header = document.querySelector('header');
+    const videoSection = document.querySelector('.video-section');
+    const videoSectionHeight = videoSection.offsetHeight; 
 
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+    reveals.forEach((reveal) => {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+        const revealPoint = 150;
 
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        if (revealTop < windowHeight - revealPoint) {
+            reveal.classList.add('visible');
+        } else {
+            reveal.classList.remove('visible');
+        }
     });
+
+    if (window.scrollY > videoSectionHeight) {
+        header.classList.add('solid');
+    } else {
+        header.classList.remove('solid');
+    }
 });
