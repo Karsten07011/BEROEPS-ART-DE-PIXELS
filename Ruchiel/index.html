@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSU! game</title>
+    <title>OSU!</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="Ruchiel/button/circle.css">
 </head>
 <body>
     <header>
@@ -14,24 +13,58 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#game">Game</a></li>
                 <li><a href="#description">Description</a></li>
-                <li><a href="https://osu.ppy.sh/" target="_blank">Original Website</a></li>
+                <li><a href="https://osu.ppy.sh" target="_blank">Original Website</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <div class="video-container">
-            <video autoplay loop muted>
-                <source src="/Ruchiel/video/Osu gameplay.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="overlay-text">
-                <h1>Osu!</h1>
-                <p>The Rythm game That will challange your Speed and strength!</p>
-            </div>
+    <section class="video-section" id="top">
+        <video autoplay muted loop class="background-video">
+            <source src="/Ruchiel/video/Osu gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <h1>Welcome to OSU!</h1>
+            <p>Experience the rhythm-based game that uses skill and precision!</p>
         </div>
-    </main>
-</body>
-<script src="Ruchiel/button/circle.js"></script>
-</html>
+    </section>
 
+    <section class="content-section" id="about">
+        <div class="image-container">
+            <img src="about-image.jpg" alt="About osu image">
+        </div>
+        <div class="text-container">
+            <h2>About osu!</h2>
+            <p>
+                osu! is a free to online game where you test your rythm! By using your sound and feeling 
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section" id="game">
+        <div class="image-container">
+            <img src="game-image.jpg" alt="osu gameplay image">
+        </div>
+        <div class="text-container">
+            <h2>Game</h2>
+            <p>
+                Everything about clicking circles, striking drums, catching fruits, and playing the synthesiser: key elements, concepts, mechanics, and competitive play.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="content-section" id="description">
+        <div class="image-container">
+            <img src="/Ruchiel/photos/Osu_desc.png" alt="osu description image">
+        </div>
+        <div class="text-container">
+            <h2>Description</h2>
+            <p>
+                
+osu! is a rhythm-based online game that challenges players to hit circles, sliders, and spinners in time with the beat of the music. Originally inspired by the Nintendo DS game "Osu! Tatakae! Ouendan," it has grown into a popular community-driven game where players can create and share their own beatmaps.<br><br>The game offers multiple modes: osu!standard (the classic click-and-drag rhythm gameplay), osu!mania (a keyboard-based mode similar to dance and rhythm games), osu!catch (where players catch falling fruits to the rhythm), and osu!taiko (drum-based gameplay). osu! is known for its high skill ceiling, competitive leaderboard, and a strong community that regularly organizes tournaments and events.<br><br>The game is free-to-play, making it accessible for everyone, and has amassed a global community of players who enjoy competing, creating beatmaps, or simply playing for fun.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
