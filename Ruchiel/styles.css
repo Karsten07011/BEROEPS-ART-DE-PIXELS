@@ -55,6 +55,34 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+.osu-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff66aa;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.1s, box-shadow 0.1s;
+    z-index: 1000;
+}
+
+.osu-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.osu-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+
 .video-section {
     position: relative;
     height: 100vh;

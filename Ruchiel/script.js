@@ -1,3 +1,10 @@
+function playSound() {
+    var audio = document.getElementById('openingSound');
+    audio.play().catch(function(error) {
+        console.log('Playback prevented:', error);
+    });
+}
+
 document.addEventListener('scroll', () => {
     const reveals = document.querySelectorAll('.reveal');
     const header = document.querySelector('header');

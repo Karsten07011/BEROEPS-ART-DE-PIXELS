@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSU!</title>
+    <title>welkom | osu!</title>
+    <link rel="icon" href="./photos/osu_icon.png">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
 <body>
+    <audio id="openingSound" src="./sound/osu_startup.mp3" preload="auto"></audio>
+
+    <button class="osu-button" onclick="playSound()">Speel Opening Geluid</button>
+
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#game">Game</a></li>
-                <li><a href="#description">Description</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="https://osu.ppy.sh/users/31915341" target="_blank">My profile</a></li>
+                <li><a href="#about">Over</a></li>
+                <li><a href="#game">Spel</a></li>
+                <li><a href="#description">Beschrijving</a></li>
+                <li><a href="#history">Geschiedenis</a></li>
+                <li><a href="https://osu.ppy.sh/users/31915341" target="_blank">Mijn profiel</a></li>
             </ul>
         </nav>
     </header>
@@ -23,7 +28,7 @@
     <section class="video-section" id="top">
         <video autoplay muted loop class="background-video">
             <source src="./video/Osu gameplay.mp4" type="video/mp4">
-            Browser doesnt use video support
+            Browser heeft geen video ondersteuning
         </video>
         <div class="video-overlay">
             <h1>Welcome to OSU!</h1>
@@ -36,10 +41,10 @@
             <img src="./photos/osu_logo.png" alt="About osu image">
         </div>
         <div class="text-container">
-            <h2>About osu!</h2>
+            <h2>Over Osu!</h2>
             <p>
-                osu! is a dynamic rhythm game that blends music and precision-based gameplay, captivating players with its engaging mechanics and vibrant community. The game revolves around hitting circles, following sliders, and performing spins in time with the beat of the music, providing an immersive and skill-intensive experience. Originally inspired by the Nintendo DS game "Osu! Tatakae! Ouendan," osu! has evolved far beyond its roots, establishing itself as a staple in the rhythm gaming scene. <br><br>
-                What truly sets osu! apart is its passionate, user-driven community. Players can create and share custom beatmaps, design skins, and develop mods to personalize their gameplay. Community involvement extends to competitive play, with international tournaments and leaderboards that foster a spirit of friendly competition.<br><br>osu! isn't just about playing to win; it’s about experiencing music in a whole new way, where rhythm meets challenge, and every beat brings you closer to mastering the game.
+                osu! is een dynamisch ritmespel dat muziek en precisiegebaseerde gameplay combineert en spelers boeit met zijn boeiende mechanica en levendige community. De game draait om het raken van cirkels, het volgen van sliders en het uitvoeren van spins op de maat van de muziek, wat een meeslepende en vaardigheidsintensieve ervaring oplevert. Oorspronkelijk geïnspireerd door het Nintendo DS-spel "Osu! Tatakae! Ouendan", osu! is tot ver buiten zijn roots geëvolueerd en heeft zichzelf gevestigd als een belangrijk onderdeel van de ritmegamingscene. <br><br>
+                Wat osu werkelijk maakt! apart is de gepassioneerde, gebruikersgestuurde gemeenschap. Spelers kunnen aangepaste beatmaps maken en delen, skins ontwerpen en mods ontwikkelen om hun gameplay te personaliseren. De betrokkenheid van de gemeenschap strekt zich uit tot competitief spel, met internationale toernooien en klassementen die een geest van vriendschappelijke competitie bevorderen.<br><br>osu! gaat niet alleen over spelen om te winnen; het gaat over het ervaren van muziek op een geheel nieuwe manier, waarbij ritme en uitdaging samenkomen, en elke beat je dichter bij het beheersen van het spel brengt.
             </p>
         </div>
     </section>
@@ -49,18 +54,18 @@
             <img src="./photos/osu_gameplay.webp" alt="osu gameplay image">
         </div>
         <div class="text-container">
-            <h2>Game</h2>
+            <h2>Spel</h2>
             <p>
-                osu! is a free-to-play rhythm game where players interact with music by hitting circles, sliders, and spinners in sync with the beat. The game is designed to test players' timing, precision, and speed, with each beatmap (a custom level) set to a song that determines the flow and difficulty. <br> <br>
+                osu! is een gratis te spelen ritmegame waarin spelers interactie hebben met muziek door cirkels, schuifregelaars en spinners synchroon met de beat te raken. De game is ontworpen om de timing, precisie en snelheid van spelers te testen, waarbij elke beatmap (een aangepast niveau) is ingesteld op een nummer dat de flow en moeilijkheidsgraad bepaalt. <br> <br>
 
-                Originally developed by Dean "peppy" Herbert in 2007, osu! has grown into a global sensation, appealing to both casual players and competitive gamers. It features four main game modes: <br> <br>
+                Oorspronkelijk ontwikkeld door Dean "peppy" Herbert in 2007, osu! is uitgegroeid tot een wereldwijde sensatie, aantrekkelijk voor zowel casual spelers als competitieve gamers. Het beschikt over vier hoofdspelmodi: <br> <br>
 
-                osu!standard: The core mode focused on tapping circles and following sliders to the music. <br> <br>
-                osu!mania: A keyboard-based mode reminiscent of traditional rhythm games where players hit notes as they descend. <br> <br>
-                osu!catch: Players control a character to catch falling fruits to the beat of the music. <br> <br>
-                osu!taiko: Inspired by Japanese taiko drumming, where players tap along with the rhythm. <br><br>
+                osu!standaard: De kernmodus was gericht op het tikken op cirkels en het volgen van schuifregelaars op de muziek. <br> <br>
+                osu!mania: een toetsenbordgebaseerde modus die doet denken aan traditionele ritmespellen waarbij spelers noten aanslaan terwijl ze afdalen. <br> <br>
+                osu!catch: Spelers besturen een personage om vallende vruchten op het ritme van de muziek te vangen. <br> <br>
+                osu!taiko: Geïnspireerd door Japans taiko-drummen, waarbij spelers meetikken met het ritme. <br><br>
 
-                The game is community-driven, allowing players to create and share beatmaps, skins, and mods. It supports a competitive scene with ranked leaderboards and tournaments, making osu! more than just a game but a shared experience centered around music and rhythm.
+                De game wordt door de community aangestuurd, waardoor spelers beatmaps, skins en mods kunnen maken en delen. Het ondersteunt een competitieve scène met klassementen en toernooien, waardoor osu! meer dan alleen een spel, maar een gedeelde ervaring waarin muziek en ritme centraal staan.
             </p>
         </div>
     </section>
@@ -71,9 +76,9 @@
             <img src="./photos/Osu_desc.png" alt="osu description image">
         </div>
         <div class="text-container">
-            <h2>Description</h2>
+            <h2>Beschrijving</h2>
             <p> 
-                osu! is a rhythm-based online game that challenges players to hit circles, sliders, and spinners in time with the beat of the music. Originally inspired by the Nintendo DS game "Osu! Tatakae! Ouendan," it has grown into a popular community-driven game where players can create and share their own beatmaps.<br><br>The game offers multiple modes: osu!standard (the classic click-and-drag rhythm gameplay), osu!mania (a keyboard-based mode similar to dance and rhythm games), osu!catch (where players catch falling fruits to the rhythm), and osu!taiko (drum-based gameplay). osu! is known for its high skill ceiling, competitive leaderboard, and a strong community that regularly organizes tournaments and events.<br><br>The game is free-to-play, making it accessible for everyone, and has amassed a global community of players who enjoy competing, creating beatmaps, or simply playing for fun.
+                osu! is een op ritme gebaseerd online spel dat spelers uitdaagt om cirkels, schuifregelaars en spinners op het ritme van de muziek te raken. Oorspronkelijk geïnspireerd door het Nintendo DS-spel "Osu! Tatakae! Ouendan", is het uitgegroeid tot een populair community-gestuurd spel waarin spelers hun eigen beatmaps kunnen maken en delen.<br><br>Het spel biedt meerdere spelmodi: osu!standaard (de klassieke klik-en-sleep-ritmegameplay), osu!mania (een toetsenbordgebaseerde modus vergelijkbaar met dans- en ritmespellen), osu!catch (waarbij spelers vallende vruchten op het ritme vangen) en osu!taiko (drum- gebaseerde gameplay). osu! staat bekend om zijn hoge vaardigheidsplafond, competitief klassement en een sterke community die regelmatig toernooien en evenementen organiseert.<br><br>De game is gratis te spelen, waardoor deze voor iedereen toegankelijk is, en heeft een wereldwijde gemeenschap van spelers die graag meedoen, beatmaps maken of gewoon voor de lol spelen.
             </p>
         </div>
     </section>
@@ -83,24 +88,24 @@
             <img src="./photos/osu_history_logo.png" alt="osu description image">
         </div>
         <div class="text-container">
-            <h2>History of osu!</h2>
+            <h2>Geschedenis van Osu!</h2>
             <p> 
-                Creation and Launch (2007) <br>
-                osu! was created by Australian developer Dean "peppy" Herbert and was initially released on September 16, 2007. Inspired by the Nintendo DS game "Osu! Tatakae! Ouendan," peppy aimed to create a rhythm game that could be played on a computer, allowing for user-generated content and a robust online community. The game was free to play, making it accessible to a broad audience. <br><br>
+                Creatie en lancering (2007) <br>
+                osu! is gemaakt door de Australische ontwikkelaar Dean "peppy" Herbert en werd voor het eerst uitgebracht op 16 september 2007. Geïnspireerd door het Nintendo DS-spel "Osu! Tatakae! Ouendan", wilde peppy een ritmespel maken dat op een computer gespeeld kon worden, waardoor voor door gebruikers gegenereerde inhoud en een robuuste online community. Het spel was gratis te spelen, waardoor het toegankelijk was voor een breed publiek. <br><br>
 
-                Early Growth (2007-2009) <br>
-                In its early days, osu! garnered attention for its unique gameplay mechanics, including the ability for players to create and share their own beatmaps. This user-generated content became a defining feature of the game, as players could customize their experience by uploading their favorite songs and designing maps. The community began to grow rapidly, with dedicated forums and support systems to foster collaboration and sharing. <br><br>
+                Vroege groei (2007-2009) <br>
+                In de beginperiode was osu! trok de aandacht vanwege de unieke gameplay-mechanismen, waaronder de mogelijkheid voor spelers om hun eigen beatmaps te maken en te delen. Deze door gebruikers gegenereerde inhoud werd een bepalend kenmerk van het spel, omdat spelers hun ervaring konden aanpassen door hun favoriete nummers te uploaden en kaarten te ontwerpen. De gemeenschap begon snel te groeien, met speciale forums en ondersteuningssystemen om samenwerking en delen te bevorderen. <br><br>
 
-                Expansion of Game Modes (2009-2012) <br>
-                In 2009, osu! expanded its gameplay by introducing additional modes: osu!taiko, which emulates traditional Japanese drumming, and osu!catch, where players control a character to catch falling fruits to the rhythm of the music. In 2012, osu!mania, a mode that mimics traditional vertical scrolling rhythm games, was also added. These modes attracted a diverse audience and enhanced the game’s overall appeal. <br><br>
+                Uitbreiding van spelmodi (2009-2012) <br>
+                In 2009 heeft osu! breidde de gameplay uit door extra modi te introduceren: osu!taiko, dat traditioneel Japans drummen emuleert, en osu!catch, waarbij spelers een personage besturen om vallend fruit te vangen op het ritme van de muziek. In 2012 werd ook osu!mania toegevoegd, een modus die traditionele verticaal scrollende ritmespellen nabootst. Deze modi trokken een divers publiek en versterkten de algehele aantrekkingskracht van de game. <br><br>
 
                 Community and Competitive Scene (2012-Present) <br>
-                As the player base continued to grow, osu! became a prominent figure in the rhythm game community. Various online competitions and tournaments began to emerge, leading to the establishment of a competitive scene. The game's ranking system allowed players to compete for high scores on a global scale, creating a sense of achievement and motivation.
+                Terwijl de spelersbasis bleef groeien, osu! werd een prominent figuur in de ritmegamegemeenschap. Er ontstonden verschillende online competities en toernooien, wat leidde tot het ontstaan ​​van een competitieve scene. Dankzij het classificatiesysteem van de game konden spelers strijden om hoge scores op wereldschaal, waardoor een gevoel van prestatie en motivatie ontstond.
             </p>
         </div>
     </section>
 <footer>
-    <p>Official Website: <a href="https://osu.ppy.sh" target="_blank">osu.ppy.sh</a></p>
+    <p>Mijn profiel: <a href="https://osu.ppy.sh" target="_blank">osu.ppy.sh</a></p>
 </footer>
 </body>
 </html>
