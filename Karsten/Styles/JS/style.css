@@ -24,27 +24,33 @@ body {
     transition: top 0.6s;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center; /* Zorgt ervoor dat de logo's verticaal zijn uitgelijnd */
+}
 
-.navbar a.logo img {
-    height: 40px;
+.logo-container img {
+    height: 40px; /* Zorg ervoor dat de logo's een consistente hoogte hebben */
     width: auto;
+    margin-right: 30px; /* Ruimte tussen de logo's */
 }
 
 .navbar nav ul {
     display: flex;
     list-style: none;
+    justify-content: center; /* Zorg ervoor dat de navigatie in het midden staat */
 }
 
 .navbar nav ul li {
     margin-left: 20px;
 }
 
-.navbar nav ul li a {
+/* .navbar nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 14px;
     padding: 10px 15px;
-}
+} */
 
 .navbar nav ul li a:hover {
     border-bottom: 2px solid white;
