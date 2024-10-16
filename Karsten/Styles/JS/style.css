@@ -1,4 +1,4 @@
-
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     color: #fff;
 }
 
-/* de top bar */
+/* Navbar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -60,7 +60,7 @@ body {
     background-color: #008f62;
 }
 
-/* het midden stuk */
+/* Hero section styles */
 .hero {
     position: relative;
     height: 100vh;
@@ -107,16 +107,126 @@ body {
     color: rgb(117, 117, 117);
 }
 
-/* de logos */
+/* Logos section styles */
 .logos img {
     height: 250px;
     margin: 0 10px;
 }
 
-/* de footer */
+/* Footer styles */
 footer {
-    background-color: #525151;
+    background-color: #202020;
     padding: 20px;
     text-align: center;
     color: white;
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar a.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.navbar nav ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Hero section styles */
+.hero1 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-background1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-content1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    width: 100%;
+}
+
+.hero-images1 {
+    display: flex;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.hero-images1 img {
+    height: 750px;
+    width: auto;
+}
+
+.hero-text1 {
+    max-width: 500px;
+    margin-right: 300px;
+}
+.imghero1 {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-text1 h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.hero-text1 p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    
 }
