@@ -1,0 +1,152 @@
+/* osu! inspired colors */
+:root {
+    --osu-pink: #ff66aa;
+    --osu-gray: #333;
+    --osu-light: #f2f2f2;
+    --osu-dark: #1a1a1a;
+    --osu-border: #444;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--osu-dark);
+    color: var(--osu-light);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, var(--osu-dark), #222);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--osu-pink);
+    padding: 10px 20px;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.go-back {
+    background: linear-gradient(145deg, #ff5a99, #ff77bb);
+    border: 1px solid var(--osu-light);
+    border-radius: 5px;
+    color: var(--osu-light);
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.go-back:hover {
+    background: linear-gradient(145deg, #ff77bb, #ff5a99);
+}
+
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile, .stats, .content, .playing-now {
+    background-color: var(--osu-gray);
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
+    border: 1px solid var(--osu-border);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    background-color: var(--osu-light);
+    border-radius: 50%;
+    border: 3px solid var(--osu-border);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.playing-now {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.beatmap {
+    flex: 1;
+}
+
+.compartment {
+    background-color: var(--osu-gray);
+    border-radius: 8px;
+    border: 1px solid var(--osu-border);
+    padding: 15px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.controls button {
+    background-color: var(--osu-pink);
+    border: none;
+    padding: 10px 20px;
+    color: var(--osu-light);
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.controls button:hover {
+    background-color: #ff77bb;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .playing-now {
+        grid-column: 1 / 2;
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

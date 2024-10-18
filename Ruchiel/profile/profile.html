@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osu! status</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <a href="/Ruchiel/index.html" class="go-back">Ga Terug!</a>
+    </header>
+
+    <main>
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="./images/profile.jpg" alt="Profile Picture" />
+            </div>
+            <h2>Gebruiksnaam: <br><br> RB076 </h2>
+            <p>Land: <br><br> 🇳🇱 Nederland</p>
+        </div>        
+        <div class="stats">
+            <p>Wereldwijde rangschikking: #104.710</p>
+            <p>Landrangschikking: #683</p>
+            <p>Gerangschikte score: 498.425.937</p>
+            <p>Treffernauwkeurigheid: 94,93%</p>
+            <p>Aantal gespeeld: 2.716</p>
+            <p>Totale score: 1.141.853.481</p>
+            <p>Totaal aantal hits: 1.524.184</p>
+            <p>Maximale combo: 1.677</p>
+            <p>Herhalingen bekeken door anderen: 0</p>
+        </div>
+        <div class="content">
+            <div class="beatmap compartment">
+                <h3>Prestatie punten</h3>
+                <p>Mama Minta Pulsa 130pp</p>
+                <p>TAKEMIKADUCHI 111pp</p>
+                <p>ETERNAL DRAIN 108pp</p>
+                <p>anemone 100pp</p>
+                <p>Oshama Scramble! 100pp</p>
+            </div>
+            <div class="beatmap compartment">
+                <h3>Recente beatmaps</h3>
+                <p>Celestial Horizon</p>
+                <p>VVelcome!!</p>
+                <p>ETERNAL DRAIN</p>
+                <p>Marigold</p>
+                <p>Take</p>
+            </div>
+        </div>
+        <div class="playing-now">
+            <h2>Speelt nu</h2>
+            <p id="currentSong">lied 1</p>
+            <audio id="audioPlayer">
+                <source src="Song/osu1.mp3" type="audio/mpeg">
+                <source src="Song/osu2.mp3" type="audio/mpeg">
+                <source src="Song/osu3.mp3" type="audio/mpeg">
+                <source src="Song/osu4.mp3" type="audio/mpeg">
+                <source src="Song/osu5.mp3" type="audio/mpeg">
+                <source src="Song/osu6.mp3" type="audio/mpeg">
+                <source src="Song/osu7.mp3" type="audio/mpeg">
+                <source src="Song/osu8.mp3" type="audio/mpeg">
+                <source src="Song/osu9.mp3" type="audio/mpeg">
+                <source src="Song/osu10.mp3" type="audio/mpeg">
+                Uw browser ondersteunt de audiotag niet.
+            </audio>
+            <div class="controls">
+                <button id="prevBtn">Vorige</button>
+                <button id="pauseBtn">Pauzeren/Hervatten</button>
+                <button id="nextBtn">Volgende</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="profile.js"></script>
+</body>
+</html>
