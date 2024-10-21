@@ -1,33 +1,20 @@
 const navbar = document.querySelector('.navbar');
+const heroImage = document.querySelector('.hero-background img');
 
-let lastScrollY = window.scrollY; // Keeps track of the last scroll position
-let isNavbarHidden = false; // Keeps track of the navbar visibility
-const hideThreshold = 100; // The scroll threshold before hiding the navbar
+let lastScrollY = window.scrollY;
+let isNavbarHidden = false;
 
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    // Check if we're scrolling down
-    if (currentScrollY > lastScrollY && currentScrollY > hideThreshold) {
-        // If scrolling down and past the threshold, hide the navbar
-        if (!isNavbarHidden) {
-            navbar.style.top = "-100px"; // Hides navbar by moving it up
-            isNavbarHidden = true;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            navbar.style.top = "-100px";
+        } else {
+            navbar.style.top = "0"; 
         }
-    }
-    // Check if we're scrolling up
-    else if (currentScrollY < lastScrollY) {
-        // If scrolling up, show the navbar again
-        if (isNavbarHidden) {
-            navbar.style.top = "0"; // Shows navbar by resetting its position
-            isNavbarHidden = false;
-        }
-    }
-
-    // Update the last scroll position
-    lastScrollY = currentScrollY;
+    });
+}, {
+    threshold: 0.3
 });
-
 
 observer.observe(heroImage);
 
