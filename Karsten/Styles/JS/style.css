@@ -12,20 +12,44 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: #111;
     padding: 10px 30px;
     position: fixed;
     top: 0;
     width: 100%;
+    height: 60px;
     z-index: 100;
-    transition: top 0.6s;
+    opacity: 80%;
 }
 
-.navbar a.logo img {
-    height: 40px;
-    width: auto;
+.logo-container {
+    position: relative; /* Needed for positioning the hover text */
+    margin-right: auto; /* Push nav items to center */
+}
+
+.navbar a.logo {
+    display: flex;
+    flex-direction: column; /* Stack logo and text */
+    align-items: center; /* Center align the items */
+}
+
+.logo-text {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition for visibility */
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar a.logo:hover .logo-text {
+    opacity: 1; /* Show text on hover */
+    transform: translateY(5px); /* Move the text down slightly on hover */
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center; /* Center nav items */
+    flex-grow: 1; /* Allow the nav items to grow */
 }
 
 .navbar nav ul {
@@ -60,6 +84,9 @@ body {
 .buy-now a:hover {
     background-color: #008f62;
 }
+
+/* Rest of your CSS remains unchanged... */
+
 
 .hero {
     position: relative;
