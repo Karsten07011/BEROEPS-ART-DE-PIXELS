@@ -1,20 +1,33 @@
 const navbar = document.querySelector('.navbar');
-const heroImage = document.querySelector('.hero-background img');
 
-let lastScrollY = window.scrollY;
-let isNavbarHidden = false;
+let lastScrollY = window.scrollY; // Keeps track of the last scroll position
+let isNavbarHidden = false; // Keeps track of the navbar visibility
+const hideThreshold = 100; // The scroll threshold before hiding the navbar
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            navbar.style.top = "-100px";
-        } else {
-            navbar.style.top = "0"; 
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    // Check if we're scrolling down
+    if (currentScrollY > lastScrollY && currentScrollY > hideThreshold) {
+        // If scrolling down and past the threshold, hide the navbar
+        if (!isNavbarHidden) {
+            navbar.style.top = "-100px"; // Hides navbar by moving it up
+            isNavbarHidden = true;
         }
-    });
-}, {
-    threshold: 0.3
+    }
+    // Check if we're scrolling up
+    else if (currentScrollY < lastScrollY) {
+        // If scrolling up, show the navbar again
+        if (isNavbarHidden) {
+            navbar.style.top = "0"; // Shows navbar by resetting its position
+            isNavbarHidden = false;
+        }
+    }
+
+    // Update the last scroll position
+    lastScrollY = currentScrollY;
 });
+
 
 observer.observe(heroImage);
 
@@ -35,4 +48,12 @@ const fadeObserver = new IntersectionObserver((entries, observer) => {
 
 faders.forEach(fader => {
     fadeObserver.observe(fader);
+});
+
+
+document.querySelectorAll('.more-info-button').forEach(button => {
+    button.addEventListener('click', (event) => {
+
+        console.log("More Info button clicked:", event.target.href);
+    });
 });

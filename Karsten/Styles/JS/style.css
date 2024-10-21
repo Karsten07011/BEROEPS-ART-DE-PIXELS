@@ -54,6 +54,7 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .buy-now a:hover {
@@ -135,6 +136,9 @@ footer {
     overflow: hidden;
     display: flex;
     align-items: center;
+}
+.hero3 {
+    background-color: #171717;
 }
 
 .hero-background1 img, .hero-background2 img, .hero-background3 img {
@@ -231,7 +235,6 @@ footer {
     line-height: 1.5;
     margin-bottom: 20px;
     width: 600px;
-
 }
 
 .trailer-button, .more-info-button {
@@ -241,16 +244,18 @@ footer {
     border: 2px solid white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s, border 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 5;
 }
 
 .trailer-button:hover, .more-info-button:hover {
     background-color: white;
     color: rgb(117, 117, 117);
+    cursor: pointer;
+    z-index: 5;
 }
 
-.more-info-button {
-    margin-left: 15px;
+.more-info-button:active, .trailer-button:active {
+    transform: scale(0.95);
 }
-
 
