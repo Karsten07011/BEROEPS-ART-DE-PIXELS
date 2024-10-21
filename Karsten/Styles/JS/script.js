@@ -4,25 +4,22 @@ const heroImage = document.querySelector('.hero-background img');
 let lastScrollY = window.scrollY;
 let isNavbarHidden = false;
 
-// Set up the Intersection Observer
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
-            navbar.style.top = "-100px"; // Hide the navbar when the image is off screen
+            navbar.style.top = "-100px";
         } else {
-            navbar.style.top = "0"; // Show the navbar when the image is in view
+            navbar.style.top = "0"; 
         }
     });
 }, {
-    threshold: 0.3 // Trigger when at least 10% of the image is visible
+    threshold: 0.3
 });
 
-// Observe the hero image
 observer.observe(heroImage);
 
 
 
-// Fade-in logic
 const faders = document.querySelectorAll('.fade-in');
 
 const fadeObserver = new IntersectionObserver((entries, observer) => {
