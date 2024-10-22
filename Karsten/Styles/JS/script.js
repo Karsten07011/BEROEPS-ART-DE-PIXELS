@@ -71,3 +71,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const watchTrailerButton = document.querySelector('.play-button');
+    const trailerSection = document.getElementById('trailer-section');
+    const closeTrailerButton = document.getElementById('close-trailer');
+    const trailerVideo = document.getElementById('trailer-video');
+
+    watchTrailerButton.addEventListener('click', () => {
+        trailerSection.classList.add('visible');
+        trailerVideo.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    });
+
+    closeTrailerButton.addEventListener('click', () => {
+        trailerSection.classList.remove('visible');
+        trailerVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    });
+});
+
+
+
+

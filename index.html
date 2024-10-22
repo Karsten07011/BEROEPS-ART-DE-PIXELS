@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Selection</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body>
-    <ul>
-        <li>
-            <div class="container1">
-                <div class="frame" id="gta">
-                    <div class="title"><a href="./Karsten/">GTA V</a></div>
-                </div>
-        </li>
-        <li>
-            <div class="container2" id="osu">
-                <div class="title"><a href="./Ruchiel/">OSU</a></div>
+    <div class="container">
+        <div class="frame" id="gta" onclick="location.href='./Karsten/'">
+            <div class="overlay">
+                <span class="game-title">GTA V</span>
+                <img src="" alt="">
             </div>
+            <img src="./Karsten/Images/gta_car_1.jpg" alt="GTA V" class="game-image" id="gta-image">
+            <img src="./Karsten/Images/GTABG2.jpg" alt="GTA V Background" class="game-image background-image" id="gta-background"> <!-- Background image -->
         </div>
-        </li>
-    </ul>
+        
+        <div class="frame" id="osu" onclick="location.href='./Ruchiel/'">
+            <div class="overlay">
+                <span class="game-title">OSU</span>
+            </div>
+            <img src="./Ruchiel/photos/osu_gameplay.webp" alt="OSU" class="game-image" id="osu-image"> <!-- Updated src to first image in array -->
+        </div>
+    </div>
+    
+    <script src="Scripts/script.js"></script>
 </body>
 </html>
