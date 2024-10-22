@@ -67,3 +67,5 @@ function goToSite(url) {
         }, 500);
     }, 200);
 }
+
+

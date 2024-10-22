@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Selection</title>
+    <title>Museum ArtDePixel</title>
     <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body>
+    <div class="center-text">
+        <h1 class="main-title">Museum ArtDePixel</h1>
+        <h3 class="subtitle">Ontdek de Wereld van Museum ArtDePixel</h3>
+    </div>
     <div class="container">
         <div class="frame" id="gta" onclick="goToSite('./Karsten/')">
             <div class="overlay">
                 <h1 class="game-title">Grand Theft Auto V</h1>
-                <p>
-                Verken de straten van Los Santos in dit actievolle spel met verbluffende gameplay in de open wereld.
-                 Beleef een uitgebreid verhaal of duik in de online modus voor eindeloze avonturen.</p>
+                <p> <br>Verken de straten van Los Santos in dit actievolle spel met verbluffende gameplay in de open wereld. Beleef een uitgebreid verhaal of duik in de online modus voor eindeloze avonturen.</p>
             </div>
             <img src="./Karsten/Images/gta_car_1.jpg" alt="GTA V" class="game-image" id="gta-image">
         </div>
         
         <div class="frame" id="osu" onclick="goToSite('./Ruchiel/')">
             <div class="overlay">
-                <h1 class="game-title">OSU</h1>
-                <p class="game-info">Een op ritme gebaseerd spel dat je reactiesnelheid en precisie uitdaagt. Neem deel aan verschillende beatmaps en kijk of jij de beste speler kunt worden.
-                </p>
+                <h1 class="game-title">OSU!</h1>
+                <p class="game-info"> <br>Een op ritme gebaseerd spel dat je reactiesnelheid en precisie uitdaagt. Neem deel aan verschillende beatmaps en kijk of jij de beste speler kunt worden.</p>
             </div>
             <img src="./Ruchiel/photos/osu_gameplay.webp" alt="OSU" class="game-image" id="osu-image">
         </div>
     </div>
-
     <div class="black-overlay" id="blackOverlay"></div>
-    
     <script src="Scripts/script.js"></script>
 </body>
 </html>
