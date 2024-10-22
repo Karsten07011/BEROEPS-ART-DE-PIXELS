@@ -1,16 +1,19 @@
 const gtaImages = [
-    './Karsten/Images/gta_car_1.jpg',
-    './Karsten/Images/gta_6_BG.png',
-    './Karsten/Images/gtaonline img.png',
-    './Karsten/Images/gta_car_2.jpg',
-    './Karsten/Images/gta_stroy.jpg',
-    './Karsten/Images/gta_story_3.jpg',
+    './Images/Gta/gta_car_1.jpg',
+    './Images/Gta/gta_6_BG.png',
+    './Images/Gta/gtaonline img.png',
+    './Images/Gta/gta_car_2.jpg',
+    './Images/Gta/gta_stroy.jpg',
+    './Images/Gta/gta_story_3.jpg',
 ];
 
 const osuImages = [
-    './Ruchiel/photos/osu_icon.png',
-    './Ruchiel/photos/osu_logo.png',
-    './Ruchiel/photos/osu_gameplay.webp',
+    './Images/Osu/osu_logo.png',
+    './Images/Osu/osu_main.png',
+    './Images/Osu/osu_standard.jpg',
+    './Images/Osu/osu_mania.png',
+    './Images/Osu/osu_taiko.png',
+    './Images/Osu/osu_catch.png',
 ];
 
 let gtaIndex = 0;
