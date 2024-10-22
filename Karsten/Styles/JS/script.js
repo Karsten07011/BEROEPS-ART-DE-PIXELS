@@ -1,9 +1,6 @@
 const navbar = document.querySelector('.navbar');
 const heroImage = document.querySelector('.hero-background img');
 
-let lastScrollY = window.scrollY;
-let isNavbarHidden = false;
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
@@ -17,8 +14,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(heroImage);
-
-
 
 const faders = document.querySelectorAll('.fade-in');
 
@@ -37,10 +32,28 @@ faders.forEach(fader => {
     fadeObserver.observe(fader);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const trailerButton = document.getElementById('watch-trailer-button');
+    const trailerSection = document.getElementById('trailer-section');
+    const closeTrailerButton = document.getElementById('close-trailer');
+    const trailerVideo = document.getElementById('trailer-video');
 
-document.querySelectorAll('.more-info-button').forEach(button => {
-    button.addEventListener('click', (event) => {
+    // Show the trailer section and play the video when the button is clicked
+    trailerButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        trailerSection.classList.remove('hidden');
+        
+        // Play the video when the section is opened
+        trailerVideo.play();
+    });
 
-        console.log("More Info button clicked:", event.target.href);
+    // Hide the trailer section and pause the video when the close button is clicked
+    closeTrailerButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        trailerSection.classList.add('hidden');
+        
+        // Pause the video when the section is closed
+        trailerVideo.pause();
     });
 });
+

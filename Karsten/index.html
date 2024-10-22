@@ -23,13 +23,10 @@
                         <li><a href="./">Overview</a></li>
                         <li><a href="./Online/">GTA Online</a></li>
                         <li><a href="./Story/">Story</a></li>
-                        <li><a href="./cars/">Cars</a></li>
+                        <li><a href="./cars/">Auto's</a></li>
                         <li><a href="./GTAVI/">GTA VI</a></li>
                     </ul>
                 </nav>
-            </div>
-            <div class="buy-now">
-                
             </div>
         </div>
     </header>
@@ -47,13 +44,22 @@
             <h1 class="fade-in">Playable on PS 4-5 and XBOX X and S</h1>
             <p class="fade-in">Experience entertainment blockbusters, Grand Theft Auto V and GTA Online.</p>
             <div class="hero-buttons fade-in">
-                <a href="#" class="trailer-button fade-in">WATCH THE TRAILER</a>
+                <a href="#" class="trailer-button fade-in" id="watch-trailer-button">WATCH THE TRAILER</a>
                 <a href="./Online/" class="more-info-button fade-in">MORE INFORMATION</a>
             </div>
         </div>
     </section>
     
-    <!-- sectie 2 [los santon story] -->
+    <section id="trailer-section" class="trailer-section hidden">
+        <video id="trailer-video" width="1000" height="563" controls>
+            <source src="Images/rockstar-games-grand-theft-auto-online-out-now-on-playstation-5-and-xbox-series-x_s-1080p.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a href="#" id="close-trailer" class="trailer-button">CLOSE TRAILER</a>
+    </section>
+    
+
+    <!-- Section 2 - Los Santos Story -->
     <section class="hero1">
         <div class="hero-background1">
             <img src="Images/los_santos-BG.jpg" alt="Los Santos Background">
@@ -65,11 +71,7 @@
             <div class="hero-text1 fade-in">
                 <img class="imghero1 fade-in" src="Images/logo pmng.png" alt="GTA V Logo">
                 <h1>Welkom in Los Santos</h1>
-                <p>
-                    Wanneer een jonge straathandelaar, een gepensioneerde bankrover en een angstaanjagende psychopaat verstrikt raken in enkele van de meest angstaanjagende en gestoorde elementen van de criminele onderwereld,
-                    de Amerikaanse overheid en de entertainmentindustrie, moeten ze een reeks gevaarlijke overvallen plegen om te overleven in een meedogenloze stad waarin ze niemand kunnen vertrouwen, 
-                    en zeker elkaar niet.
-                </p>
+                <p>Wanneer een jonge straathandelaar, een gepensioneerde bankrover en een angstaanjagende psychopaat...</p>
                 <div class="hero-buttons fade-in">
                     <a href="./Online/" class="more-info-button fade-in">MORE INFORMATION</a>
                 </div>
@@ -77,7 +79,7 @@
         </div>
     </section>
 
-    <!-- sectie 3 [online] -->
+    <!-- Section 3 - Online -->
     <section class="hero2">
         <div class="hero-background2">
             <img src="Images/imagebg.jpg" alt="Los Santos Background">
@@ -89,9 +91,7 @@
             <div class="hero-text2 fade-in">
                 <img class="imghero2 fade-in" src="Images/gtav online logo pmng.png" alt="GTA Online Logo">
                 <h1>Grand Theft Auto Online</h1>
-                <p>
-                    Ervaar GTA Online, een dynamisch en steeds evoluerend online universum voor maximaal 30 spelers, waar je kunt opklimmen van straat-niveau tot een spilfiguur van je eigen criminele imperium.
-                </p>
+                <p>Ervaar GTA Online, een dynamisch en steeds evoluerend online universum...</p>
                 <div class="hero-buttons fade-in">
                     <a href="./Online/" class="more-info-button fade-in">MEER INFORMATIE</a>
                 </div>
@@ -99,7 +99,7 @@
         </div>
     </section>
 
-    <!-- sectie 4 [cars] -->
+    <!-- Section 4 - Cars -->
     <section class="hero3">
         <div class="hero-background3">
             <img src="Images/los_santos-BG.jpg" alt="Los Santos Background">
@@ -110,11 +110,7 @@
             </div>
             <div class="hero-text3 fade-in">
                 <h1>Auto's</h1>
-                <p>
-                    Wanneer een jonge straathandelaar, een gepensioneerde bankrover en een angstaanjagende psychopaat verstrikt raken in enkele van de meest angstaanjagende en gestoorde elementen van de criminele onderwereld,
-                    de Amerikaanse overheid en de entertainmentindustrie, moeten ze een reeks gevaarlijke overvallen plegen om te overleven in een meedogenloze stad waarin ze niemand kunnen vertrouwen, 
-                    en zeker elkaar niet.
-                </p>
+                <p>In Grand Theft Auto V zijn auto's niet alleen een middel van transport, maar vormen ze ook de kern van de gameplay...</p>
                 <div class="hero-buttons fade-in">
                     <a href="./cars/" class="more-info-button fade-in">MEER INFORMATIE</a>
                 </div>
@@ -122,6 +118,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Karsten. All Rights Reserved By Museum De Pixel.</p>
     </footer>
