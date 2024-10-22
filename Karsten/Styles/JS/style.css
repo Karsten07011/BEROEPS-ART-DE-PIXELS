@@ -21,23 +21,25 @@ body {
     height: 60px;
     z-index: 100;
     opacity: 0.9;
+    transition: top 0.3s ease; 
 }
 
+
 .navbar .logo-container {
-    position: absolute;      /* Change from fixed to absolute to make it scrollable */
-    left: 30px;              /* Adjust this to fine-tune the logo position on the left */
+    position: absolute;
+    left: 30px;     
     display: flex;
-    align-items: center;     /* Vertically center the logo */
+    align-items: center;   
 }
 
 .navbar .logo-container img {
-    width: 40px;            /* Adjust logo size */
+    width: 40px;         
     height: auto;
 }
 
 .navbar .nav-items {
     display: flex;
-    gap: 30px;               /* Adjust the space between the navbar items */
+    gap: 30px;         
     margin-top: 10px;
 }
 
@@ -314,22 +316,19 @@ footer {
     z-index: 1000;
 }
 
-/* Ensure hidden state initially */
 .trailer-section.hidden {
     display: none;
 }
 
-/* Make the iframe larger */
 #trailer-iframe {
     border: none;
     width: 1000px;
-    height: 563px; /* Aspect ratio of 16:9 for widescreen */
+    height: 563px; 
     max-width: 90%;
     max-height: 90%;
     margin-bottom: 20px;
 }
 
-/* Make the close button similar to the existing trailer-button style */
 #close-trailer {
     text-align: center;
     padding: 10px 30px;

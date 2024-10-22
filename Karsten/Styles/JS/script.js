@@ -1,12 +1,28 @@
 const navbar = document.querySelector('.navbar');
 const heroImage = document.querySelector('.hero-background img');
 
+let lastScrollTop = 0; 
+const navbarHeight = 60; 
+const hideThreshold = 300; 
+
+window.addEventListener('scroll', () => {
+    const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScrollTop > hideThreshold) {
+        if (currentScrollTop > lastScrollTop) {
+            navbar.style.top = `-${navbarHeight}px`;
+        } else {
+            navbar.style.top = '0'; 
+        }
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; 
+});
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            navbar.style.top = "-100px";
-        } else {
-            navbar.style.top = "0"; 
+        if (!entry.isIntersecting && window.scrollY > hideThreshold) {
+            navbar.style.top = `-${navbarHeight}px`; 
         }
     });
 }, {
@@ -14,6 +30,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(heroImage);
+
+
 
 const faders = document.querySelectorAll('.fade-in');
 
@@ -38,21 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeTrailerButton = document.getElementById('close-trailer');
     const trailerVideo = document.getElementById('trailer-video');
 
-    // Show the trailer section and play the video when the button is clicked
     trailerButton.addEventListener('click', function(event) {
         event.preventDefault();
         trailerSection.classList.remove('hidden');
         
-        // Play the video when the section is opened
         trailerVideo.play();
     });
 
-    // Hide the trailer section and pause the video when the close button is clicked
     closeTrailerButton.addEventListener('click', function(event) {
         event.preventDefault();
         trailerSection.classList.add('hidden');
         
-        // Pause the video when the section is closed
         trailerVideo.pause();
     });
 });
