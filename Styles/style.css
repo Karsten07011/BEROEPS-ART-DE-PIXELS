@@ -50,12 +50,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.2; /* Initial opacity for main images */
-  visibility: visible; /* Ensure images are visible when hovered */
+  opacity: 0.2; 
+  visibility: visible; 
 }
 
 .frame:hover .game-image {
-  opacity: 1; /* Full opacity on hover */
+  opacity: 1; 
 }
 
 .background-image {
@@ -65,11 +65,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  visibility: hidden; /* Keep background hidden initially */
-  z-index: -1; /* Place it behind other images */
+  visibility: hidden;
+  z-index: -1;
 }
 
-/* Slide in and slide out animations */
+
 @keyframes slideIn {
   from {
       transform: translateX(100%);

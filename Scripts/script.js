@@ -8,7 +8,7 @@ const gtaImages = [
     './Karsten/Images/los_santos-BG.jpg',
     './Karsten/Images/gta_stroy.jpg',
     './Karsten/Images/gta_story_3.jpg',
-    './Karsten/Images/GTABG2.jpg', // Background image that stays visible
+    './Karsten/Images/GTABG2.jpg',
 ];
 
 const osuImages = [
@@ -26,32 +26,32 @@ let isHoveringOSU = false;
 
 function switchImage(frameId, images, index) {
     const imageElement = document.getElementById(frameId);
-    const nextIndex = (index + 1) % (images.length - 1); // Skip the last image
+    const nextIndex = (index + 1) % (images.length - 1); 
     const nextImage = new Image();
     nextImage.src = images[nextIndex];
 
-    imageElement.style.animation = 'slideOut 0.5s forwards'; // Start slide out animation
+    imageElement.style.animation = 'slideOut 0.5s forwards';
     setTimeout(() => {
         imageElement.src = nextImage.src;
-        imageElement.style.animation = 'slideIn 0.5s forwards'; // Start slide in animation
-    }, 500); // Time taken for slide out
+        imageElement.style.animation = 'slideIn 0.5s forwards';
+    }, 500);
 
-    return nextIndex; // Return the next index
+    return nextIndex; 
 }
 
 function startImageRotation(frameId, images, index) {
     const imageElement = document.getElementById(frameId);
     imageElement.src = images[index];
-    imageElement.style.opacity = 0.2; // Set low opacity initially
+    imageElement.style.opacity = 0.2; 
 
     return setInterval(() => {
-        index = switchImage(frameId, images, index); // Update the index
+        index = switchImage(frameId, images, index);
     }, 5000);
 }
 
 function setOpacityForAllImages(opacity) {
-    document.getElementById('gta-image').style.opacity = opacity; // Set GTA image opacity
-    document.getElementById('osu-image').style.opacity = opacity; // Set OSU image opacity
+    document.getElementById('gta-image').style.opacity = opacity; 
+    document.getElementById('osu-image').style.opacity = opacity; 
 }
 
 // GTA Frame Mouse Enter
@@ -60,9 +60,9 @@ document.getElementById('gta').addEventListener('mouseenter', () => {
         isHoveringGTA = true;
         if (!gtaInterval) {
             gtaInterval = startImageRotation('gta-image', gtaImages, gtaIndex);
-            gtaIndex = (gtaIndex + 1) % (gtaImages.length - 1); // Update index to skip the last image
-            document.getElementById('gta-image').style.opacity = 1; // Set opacity to full on hover
-            document.getElementById('gta-background').style.visibility = 'visible'; // Show the background on hover
+            gtaIndex = (gtaIndex + 1) % (gtaImages.length - 1);
+            document.getElementById('gta-image').style.opacity = 1;
+            document.getElementById('gta-background').style.visibility = 'visible';
         }
     }
 });
@@ -73,34 +73,33 @@ document.getElementById('osu').addEventListener('mouseenter', () => {
         isHoveringOSU = true;
         if (!osuInterval) {
             osuInterval = startImageRotation('osu-image', osuImages, osuIndex);
-            osuIndex = (osuIndex + 1) % osuImages.length; // No change needed for OSU images
-            document.getElementById('osu-image').style.opacity = 1; // Set opacity to full on hover
+            osuIndex = (osuIndex + 1) % osuImages.length; 
+            document.getElementById('osu-image').style.opacity = 1;
         }
     }
 });
 
-// Function to reset opacity for all images
 function resetImagesOpacity() {
-    setOpacityForAllImages(0.2); // Reset opacity for all images to 0.2
-    document.getElementById('gta-background').style.visibility = 'hidden'; // Hide the background when not hovering
+    setOpacityForAllImages(0.2);
+    document.getElementById('gta-background').style.visibility = 'hidden';
 }
 
 // GTA Frame Mouse Leave
 document.getElementById('gta').addEventListener('mouseleave', () => {
     clearInterval(gtaInterval);
     gtaInterval = null;
-    isHoveringGTA = false; // Reset hover state
-    resetImagesOpacity(); // Call the reset function to handle opacity and visibility
+    isHoveringGTA = false;
+    resetImagesOpacity();
 });
 
 // OSU Frame Mouse Leave
 document.getElementById('osu').addEventListener('mouseleave', () => {
     clearInterval(osuInterval);
     osuInterval = null;
-    isHoveringOSU = false; // Reset hover state
-    resetImagesOpacity(); // Call the reset function to handle opacity for all images
+    isHoveringOSU = false; 
+    resetImagesOpacity();
 });
 
 // Set the initial visibility for the background images
-document.getElementById('gta-background').style.visibility = 'hidden'; // Initially hidden for background
-resetImagesOpacity(); // Initialize all images to have lower opacity
+document.getElementById('gta-background').style.visibility = 'hidden';
+resetImagesOpacity();
