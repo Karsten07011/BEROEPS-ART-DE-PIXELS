@@ -118,7 +118,7 @@ body {
 .hero-content {
     position: absolute;
     top: 100px;
-    left: 80px;
+    left: 60px;
     color: white;
 }
 
@@ -179,9 +179,6 @@ footer {
     align-items: center;
 }
 
-.hero3 {
-    background-color: #171717;
-}
 
 .hero-background1 img, .hero-background2 img, .hero-background3 img {
     width: 100%;
@@ -191,11 +188,23 @@ footer {
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0.75;
+}
+
+.hero-background2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 .hero-content1 {
     position: absolute;
-    top: 100px;
+    top: 80px;
     right: 20px;
     color: white;
 }
@@ -221,9 +230,9 @@ footer {
 }
 
 .hero-images1 img {
-    height: 850px;
+    height: 100px;
     width: auto;
-    right: 350px;
+    right: 1150px;
     position: fixed;
 }
 
