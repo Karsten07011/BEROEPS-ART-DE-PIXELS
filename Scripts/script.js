@@ -1,10 +1,13 @@
 const gtaImages = [
     './Images/Gta/gta_car_1.jpg',
-    './Images/Gta/gta_6_BG.png',
-    './Images/Gta/gtaonline img.png',
-    './Images/Gta/gta_car_2.jpg',
-    './Images/Gta/gta_stroy.jpg',
-    './Images/Gta/gta_story_3.jpg',
+    './Images/Gta/gta_2.png',
+    './Images/Gta/gta_3.jpg',
+    './Images/Gta/gta_4.jpg',
+    './Images/Gta/gta_5.jpg',
+    './Images/Gta/gta_6.jpg',
+    './Images/Gta/gta_7.png',
+    './Images/Gta/gta_8.jpg',
+    './Images/Gta/gta_9.jpg',
 ];
 
 const osuImages = [
